@@ -6,7 +6,7 @@ var logs = [
 ];
 
 var log = [
-    "The Fog\nDate: January 23, 2046\n\nI woke up today in absolute silence. There was no one home, so I went to look out of the window and saw this thick fog covering everything. Normally I wouldn't think anything of it, since fog is a pretty normal thing in Finland, but something still seemed off. I decided to check it out.\n\nEnd of log, type: 'read 2', to view the next log",
+    "The Fog\nDate: January 23, 2046\n\nI woke up today in absolute silence. There was no one home, so I went to look out of the window and saw this thick fog covering everything. Normally I wouldn't think anything of it, since fog is a pretty normal thing in Finland, but something still seemed off. I decided to check it out.\n\nEnd of log, type 'read 2' to continue",
     "The Walk to School\nDate: January 23, 2046"
 ];
 
