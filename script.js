@@ -79,7 +79,7 @@ function viewLog(outputElement, logIndex) {
 
 function listImages(outputElement) {
     // Replace these image names with your actual image file names
-    var imageNames = ["image1.jpg", "image2.jpg"];
+    var imageNames = ["my_house.png", "neighbour.png", "burnt_house.png", "empty_road.png", "foggy_buildings.png", "powerlines.png", "abandoned_school.png", "hallway.png", "classroom.png", "exit_sign.png", "glass_hallway.png"];
 
     if (imageNames.length > 0) {
         outputElement.innerText += "Images in the folder:\n";
@@ -104,11 +104,11 @@ function showHelp(outputElement) {
     outputElement.innerHTML +=
         "Available commands:\n" +
         "  - images: Lists all images\n" +
-        "  - view [imageName.jpg]: Views the specified image\n" +
+        "  - view: [imageName.png]: Views the specified image\n" +
         "  - logs: Lists all logs\n" +
-        "  - read [logIndex]: Read the specified log\n" +
+        "  - read: [logNumber]: Read the specified log\n" +
         "  - help: Displays this help message\n" +
-        "  - clear: Clears the terminal output\n\n";
+        "  - clear: Clears the terminal\n\n";
 }
 
 function clearOutput(outputElement) {
