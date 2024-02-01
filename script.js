@@ -1,13 +1,18 @@
 // Sample logs array for demonstration purposes
 var logs = [
-    "The Fog",
-    "The Walk to School",
-    "Log entry 3: More things happened",
+    "Something's Off",
+    "Update",
+    "Exploration",
+    "lolololol",
+    "Finder's Log"
 ];
 
 var log = [
-    "The Fog\nDate: January 23, 2046\n\nI woke up today in absolute silence. There was no one home, so I went to look out of the window and saw this thick fog covering everything. Normally I wouldn't think anything of it, since fog is a pretty normal thing in Finland, but something still seemed off. I decided to check it out.\n\nEnd of log, type 'read 2' to continue",
-    "The Walk to School\nDate: January 23, 2046"
+    "Something's Off\nDate: January 23, 2022\n\nI woke up today in absolute silence. No footsteps, no yelling and no cluttering of kitchenware. I checked my phone, no service. Weird. I went downstairs and realised I was alone. I went and looked through the whole house, nothing. I decided to look out of the window to see if our car was still outside, it was. While looking for our car I saw this thick “fog” covering everything. Normally I wouldn't think anything of it, since fog is common in Finland especially during winter time, but something just seemed so off about it. All quiet, no one around, thick “fog” everywhere, no phone service but still power?. I woke up quite late, due to the lack of noise in the house, normally I’d wake up to the yelling that my brothers make. While looking around I found this old Sony Alpha 100 from 2006. I remember using it to take pictures of our old dog, so I decided to keep it with me and document everything. I went outside to see if my neighbours were home.\n\n--Attachment ‘my_house.png’ (use ‘view’ to view image)--\n\nFrom the outside my house looked weirdly abandoned, but the power still works. This “fog” must’ve weathered the paint or something. I wonder how long I’ve been asleep for.\n\n--Attachment ‘neighbour.png’--\n\nThe neighbour’s house looked even worse, plants had grown on the walls and everything, but the power still worked... I tried to knock on their door, but no one answered. A house next to theirs was even burnt down.\n\n--Attachment ‘burnt_house.png’--\n\nWhere is everyone???? To be honest, I got a little freaked out and headed back inside.\n\nEnd of log, 'read 2' to continue",
+    "Update\nDate: January 24, 2022\n\nIt’s really getting weird now. I also don’t know what to call these logs and even if anyone’s going to read them, since I haven’t heard from anyone in about 24 hours. I’m getting worried. My phone still doesn’t work so I can’t call anyone. I contemplated the whole morning whether I should go out and look for help or just stay home and wait. Whatever happened, that “fog” must have something to do with it. Anyways, I decided in favour of going out on a little expedition to look for help, I don’t think anyones looking for me. It’s getting too dark so I’ll go tomorrow. I’ll try to remember the camera as well.\n\nEnd of log, ‘read 3’ to continue",
+    "Exploration\nDate: January 25, 2022\n\nnothing yet",
+    "nothing yet",
+    "we found it"
 ];
 
 function executeCommand() {
@@ -46,7 +51,7 @@ function executeCommand() {
                 var logIndex = parseInt(commandParts[1]) - 1;
                 viewLog(outputElement, logIndex);
             } else {
-                outputElement.innerText += "Usage: read [2]\n\n";
+                outputElement.innerText += "Usage: read [number]\n\n";
             }
             break;
         default:
@@ -104,9 +109,9 @@ function showHelp(outputElement) {
     outputElement.innerHTML +=
         "Available commands:\n" +
         "  - images: Lists all images\n" +
-        "  - view: [imageName.png]: Views the specified image\n" +
+        "  - view: [image.png]: Views the specified image\n" +
         "  - logs: Lists all logs\n" +
-        "  - read: [logNumber]: Read the specified log\n" +
+        "  - read: [number]: Read the specified log\n" +
         "  - help: Displays this help message\n" +
         "  - clear: Clears the terminal\n\n";
 }
