@@ -3,16 +3,18 @@ var logs = [
     "Something's Off",
     "Update",
     "Exploration",
-    "lolololol",
+    "Update 2",
+    "The School",
     "Finder's Log"
 ];
 
 var log = [
     "Something's Off\nDate: January 23, 2022\n\nI woke up today in absolute silence. No footsteps, no yelling and no cluttering of kitchenware. I checked my phone, no service. Weird. I went downstairs and realised I was alone. I went and looked through the whole house, nothing. I decided to look out of the window to see if our car was still outside, it was. While looking for our car I saw this thick “fog” covering everything. Normally I wouldn't think anything of it, since fog is common in Finland especially during winter time, but something just seemed so off about it. All quiet, no one around, thick “fog” everywhere, no phone service but still power?. I woke up quite late, due to the lack of noise in the house, normally I’d wake up to the yelling that my brothers make. While looking around I found this old Sony Alpha 100 from 2006. I remember using it to take pictures of our old dog, so I decided to keep it with me and document everything. I went outside to see if my neighbours were home.\n\n--Attachment ‘my_house.png’ (use ‘view’ to view image)--\n\nFrom the outside my house looked weirdly abandoned, but the power still works. This “fog” must’ve weathered the paint or something. I wonder how long I’ve been asleep for.\n\n--Attachment ‘neighbour.png’--\n\nThe neighbour’s house looked even worse, plants had grown on the walls and everything, but the power still worked... I tried to knock on their door, but no one answered. A house next to theirs was even burnt down.\n\n--Attachment ‘burnt_house.png’--\n\nWhere is everyone???? To be honest, I got a little freaked out and headed back inside.\n\nEnd of log, 'read 2' to continue",
     "Update\nDate: January 24, 2022\n\nIt’s really getting weird now. I also don’t know what to call these logs and even if anyone’s going to read them, since I haven’t heard from anyone in about 24 hours. I’m getting worried. My phone still doesn’t work so I can’t call anyone. I contemplated the whole morning whether I should go out and look for help or just stay home and wait. Whatever happened, that “fog” must have something to do with it. Anyways, I decided in favour of going out on a little expedition to look for help, I don’t think anyones looking for me. It’s getting too dark so I’ll go tomorrow. I’ll try to remember the camera as well.\n\nEnd of log, ‘read 3’ to continue",
-    "Exploration\nDate: January 25, 2022\n\nnothing yet",
-    "nothing yet",
-    "we found it"
+    "Exploration\nDate: January 25, 2022\n\nDay 3 of being alone, this “fog” is really starting to fuck with me. I went outside, there’s literally no one around. What the hell happened to everyone. Even the animals are gone. I passed by this bridge nearby, you can see a shopping mall on the other side with a bunch of cars usually going by, but there were none there. Some cars that were there were shut off.\n\n--Attachment ‘foggy_buildings.png’--\n\nThe views look pretty cool, but it’s still so weird. There’s something eerily calm about the “fog”, it almost speaks to me in a way. I don’t know how to describe it. I also found these powerlines, someone must still be running the nearby power plant. I might be able to find some help there, but I’m pretty sure it’s quite far away. I don’t have any means of transport. Can’t drive a car, since I don’t have a license, no buses running and I don’t have a bike. I could try to find one somewhere, but that’ll be a future problem. Here’s the power lines I was talking about:\n\n--Attachment ‘powerlines.png’--\n\nNotice how there are no birds sitting on them. Yeah.. Nothing around. I also checked out a nearby store and got some supplies, a lot of things are already going bad. Took some tin canned foods, since they preserve well. Here’s also the road to the bridge I was talking about:\n\n--Attachment ‘empty_road.png’--\n\nEnd of log, ‘read 4’ to continue",
+    "Update 2\nDate: January 31, 2022",
+    "The School\nDate: February 12, 2022",
+    "Finder's Log\nDate: February 2, 2024"
 ];
 
 function executeCommand() {
@@ -62,9 +64,9 @@ function executeCommand() {
 
 function listLogs(outputElement) {
     if (logs.length > 0) {
-        outputElement.innerText += "Logs:\n";
+        outputElement.innerText += "Logs found:\n";
         for (var i = 0; i < logs.length; i++) {
-            outputElement.innerText += `${i + 1}. ${logs[i]}\n`;
+            outputElement.innerText += `Entry ${i + 1}: ${logs[i]}\n`;
         }
         outputElement.innerText += "\n";
     } else {
@@ -75,7 +77,7 @@ function listLogs(outputElement) {
 function viewLog(outputElement, logIndex) {
     if (logIndex >= 0 && logIndex < logs.length) {
         clearOutput(outputElement);
-        outputElement.innerText += `Log ${logIndex + 1}: ${log[logIndex]}\n\n`;
+        outputElement.innerText += `Log entry ${logIndex + 1}: ${log[logIndex]}\n\n`;
     } else {
         outputElement.innerText += "Invalid log index.\n\n";
     }
