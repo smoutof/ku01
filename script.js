@@ -29,26 +29,44 @@ function executeCommand() {
 
     switch (command) {
         case "images":
+            outputElement.innerText += `$ ${commandInput}\n\n`;
             listImages(outputElement);
             break;
         case "view":
+            outputElement.innerText += `$ ${commandInput}\n\n`;
             if (commandParts.length === 2) {
                 var imageName = commandParts[1];
-                viewImage(outputElement, imageName);
+                if (imageName === "all"){
+                    viewImage(outputElement, "abandoned_school.png")
+                    viewImage(outputElement, "burnt_house.png")
+                    viewImage(outputElement, "classroom.png")
+                    viewImage(outputElement, "empty_road.png")
+                    viewImage(outputElement, "exit_sign.png")
+                    viewImage(outputElement, "foggy_buildings.png")
+                    viewImage(outputElement, "glass_hallway.png")
+                    viewImage(outputElement, "my_house.png")
+                    viewImage(outputElement, "neighbour.png")
+                    viewImage(outputElement, "powerlines.png")
+                } else{
+                    viewImage(outputElement, imageName);
+                }
             } else {
-                outputElement.innerText += "Usage: view [imageName.jpg]\n\n";
+                outputElement.innerText += "Usage: view [imageName.jpg] or view all\n\n";
             }
             break;
         case "help":
+            outputElement.innerText += `$ ${commandInput}\n\n`;
             showHelp(outputElement);
             break;
         case "clear":
             clearOutput(outputElement);
             break;
         case "logs":
+            outputElement.innerText += `$ ${commandInput}\n\n`;
             listLogs(outputElement);
             break;
         case "read":
+            outputElement.innerText += `$ ${commandInput}\n\n`;
             if (commandParts.length === 2) {
                 var logIndex = parseInt(commandParts[1]) - 1;
                 viewLog(outputElement, logIndex);
